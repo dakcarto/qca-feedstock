@@ -9,6 +9,7 @@ cmake \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DUSE_RELATIVE_PATHS=TRUE \
     -DQCA_PLUGINS_INSTALL_DIR=$PREFIX/plugins \
+    -DQT4_BUILD=ON \
     ..
 
 make

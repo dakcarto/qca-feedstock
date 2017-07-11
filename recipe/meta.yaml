@@ -1,18 +1,18 @@
 {% set name = "qca" %}
-{% set version = "2.1.0" %}
-{% set md5 = "c2b00c732036244701bae4853a2101cf" %}
+{% set version = "2.1.1" %}
+{% set md5 = "55dcd05bc05f431184e97537dadda694" %}
 
 package:
   name: qca
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: http://delta.affinix.com/download/qca/2.0/{{ name }}-{{ version }}.tar.gz
+  fn: v{{ version }}.tar.gz
+  url: https://github.com/KDE/qca/archive/v{{ version }}.tar.gz
   md5: {{ md5 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
