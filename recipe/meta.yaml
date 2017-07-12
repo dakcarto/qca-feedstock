@@ -1,6 +1,6 @@
 {% set name = "qca" %}
-{% set version = "2.1.1" %}
-{% set md5 = "55dcd05bc05f431184e97537dadda694" %}
+{% set version = "2.1.3" %}
+{% set md5 = "bd646d08fdc1d9be63331a836ecd528f" %}
 
 package:
   name: qca
@@ -18,6 +18,7 @@ build:
 requirements:
   build:
     - cmake
+    - toolchain
     - pkg-config  # [unix]
     - qt 4.8.*
   run:
