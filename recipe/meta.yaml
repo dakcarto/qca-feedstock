@@ -1,14 +1,14 @@
 {% set name = "qca" %}
-{% set version = "2.1.0" %}
-{% set md5 = "c2b00c732036244701bae4853a2101cf" %}
+{% set version = "2.1.3" %}
+{% set md5 = "bd646d08fdc1d9be63331a836ecd528f" %}
 
 package:
   name: qca
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: http://delta.affinix.com/download/qca/2.0/{{ name }}-{{ version }}.tar.gz
+  fn: v{{ version }}.tar.gz
+  url: https://github.com/KDE/qca/archive/v{{ version }}.tar.gz
   md5: {{ md5 }}
 
 build:
@@ -18,10 +18,11 @@ build:
 requirements:
   build:
     - cmake
+    - toolchain
     - pkg-config  # [unix]
-    - qt 
+    - qt 4.8.*
   run:
-    - qt
+    - qt 4.8.*
  
 test:
   commands:
