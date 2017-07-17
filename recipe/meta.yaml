@@ -21,6 +21,7 @@ build:
     
 requirements:
   build:
+    - python  # [win]
     - cmake
     - toolchain
     - pkg-config  # [unix]
@@ -37,7 +38,7 @@ requirements:
 test:
   commands:
     - test -f ${PREFIX}/lib/libqca-qt5.so  # [linux]
-    - test -d ${PREFIX}/lib/libqca-qt5.dylib  # [osx]
+    - test -f ${PREFIX}/lib/libqca-qt5.dylib  # [osx]
     - if not exist %LIBRARY_BIN%\\qca-qt5.dll exit 1  # [win]
     
 about:
