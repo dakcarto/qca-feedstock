@@ -38,7 +38,7 @@ requirements:
 test:
   commands:
     - test -f ${PREFIX}/lib/libqca-qt5.so  # [linux]
-    - test -f ${PREFIX}/lib/libqca-qt5.dylib  # [osx]
+    - test -d ${PREFIX}/lib/qca-qt5.framework  # [osx]
     - if not exist %LIBRARY_BIN%\\qca-qt5.dll exit 1  # [win]
     
 about:
