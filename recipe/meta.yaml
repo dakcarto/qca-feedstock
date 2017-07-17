@@ -12,22 +12,21 @@ source:
   md5: {{ md5 }}
 
 build:
-  number: 0
-  skip: true  # [win]
+  number: 1
 
 requirements:
   build:
     - cmake
     - toolchain
     - pkg-config  # [unix]
-    - qt 4.8.*
+    - qt 5.6.*
   run:
-    - qt 4.8.*
+    - qt 5.6.*
  
 test:
   commands:
-    - test -f ${PREFIX}/lib/libqca.so  # [linux]
-    - test -d ${PREFIX}/lib/qca.framework  # [osx]
+    - test -f ${PREFIX}/lib/libqca-qt5.so  # [linux]
+    - test -d ${PREFIX}/lib/qca-qt5.dylib  # [osx]
 
 about:
   home: http://delta.affinix.com/qca/ 
