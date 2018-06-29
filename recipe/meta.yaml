@@ -12,40 +12,30 @@ source:
   md5: {{ md5 }}
 
 build:
-  number: 1
-  skip: True  # [win and py>35]
-  features:
-    - vc9     # [win and py27]
-    - vc10    # [win and py34]
-    - vc14    # [win and py35]
-    
+  number: 2
+
 requirements:
   build:
-    - python  # [win]
     - cmake
-    - toolchain
     - pkg-config  # [unix]
-    - qt 5.6.*
-    - vc 9    # [win and py27]
-    - vc 10   # [win and py34]
-    - vc 14   # [win and py35]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - qt
   run:
-    - qt 5.6.*
-    - vc 9    # [win and py27]
-    - vc 10   # [win and py34]
-    - vc 14   # [win and py35]
-    
+    - qt
+
 test:
   commands:
     - test -f ${PREFIX}/lib/libqca-qt5.so  # [linux]
     - test -d ${PREFIX}/lib/qca-qt5.framework  # [osx]
     - if not exist %LIBRARY_BIN%\\qca-qt5.dll exit 1  # [win]
-    
+
 about:
-  home: http://delta.affinix.com/qca/ 
+  home: http://delta.affinix.com/qca/
   license: LGPL-2.1
   license_file: COPYING
-  summary: Qt Cryptographic Architecture (QCA) provides a straightforward and cross-platform crypto API, using Qt datatypes and conventions. 
+  summary: Qt Cryptographic Architecture (QCA) provides a straightforward and cross-platform crypto API, using Qt datatypes and conventions.
   description: |
     Taking a hint from the similarly-named Java Cryptography Architecture, QCA
     aims to provide a straightforward and cross-platform crypto API, using Qt
