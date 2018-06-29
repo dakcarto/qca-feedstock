@@ -22,14 +22,16 @@ should work everywhere Qt does, including Windows/Unix/MacOSX.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/qca-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/qca-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/qca-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/qca-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/qca-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/qca-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/qca-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/qca-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/qca-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/qca-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/qca-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/qca-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/qca/badges/version.svg)](https://anaconda.org/conda-forge/qca)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/qca/badges/downloads.svg)](https://anaconda.org/conda-forge/qca)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-qca-green.svg)](https://anaconda.org/conda-forge/qca) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/qca.svg)](https://anaconda.org/conda-forge/qca) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/qca.svg)](https://anaconda.org/conda-forge/qca) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/qca.svg)](https://anaconda.org/conda-forge/qca) |
 
 Installing qca
 ==============
@@ -74,6 +76,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
