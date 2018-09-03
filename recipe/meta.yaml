@@ -10,9 +10,11 @@ source:
   fn: v{{ version }}.tar.gz
   url: https://github.com/KDE/qca/archive/v{{ version }}.tar.gz
   md5: {{ md5 }}
+  patches:
+    - cmake-project.patch
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -21,9 +23,9 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - qt
+    - qt 5.9.*
   run:
-    - qt
+    - qt 5.9.*
 
 test:
   commands:
