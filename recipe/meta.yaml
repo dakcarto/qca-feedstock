@@ -14,7 +14,7 @@ source:
     - cmake-project.patch
 
 build:
-  number: 3
+  number: 4
 
 requirements:
   build:
@@ -30,7 +30,7 @@ requirements:
 test:
   commands:
     - test -f ${PREFIX}/lib/libqca-qt5.so  # [linux]
-    - test -d ${PREFIX}/lib/qca-qt5.framework  # [osx]
+    - test -f ${PREFIX}/lib/libqca-qt5.dylib  # [osx]
     - if not exist %LIBRARY_BIN%\\qca-qt5.dll exit 1  # [win]
 
 about:
